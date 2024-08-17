@@ -1,0 +1,106 @@
+#root {
+    /* max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem; */
+    text-align: justify;
+    font-family: "Quicksand", sans-serif;
+}
+
+.mr-5 {
+    margin-right: 3rem !important;
+}
+
+
+/* Navbar Component */
+
+.logo {
+    font-family: "daddy rewind", sans-serif;
+    font-weight: 400;
+    font-size: 2em;
+    color: #00a2ed;
+}
+
+.logo:hover {
+    color: #00a2ed;
+}
+
+.nav-item {
+    z-index: 1;
+}
+
+.navbar-nav {
+    align-items: flex-start;
+}
+
+.fixed-top {
+    position: fixed !important;
+}
+
+.topnav {
+    box-shadow: none !important;
+    /* White background with 90% opacity */
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    background-color: rgba(transparent, 0.9) !important;
+}
+
+.container-fluid {
+    height: 70px;
+}
+
+.Menuitem {
+    display: none;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 100%;
+    background-color: #fff;
+    /* Set the background color */
+    overflow-x: hidden;
+    animation: ease-in-out;
+    transition: 0.5s;
+    /* Set the transition duration */
+}
+
+.navbarmenu {
+    z-index: 1;
+}
+
+.navbaritems {
+    z-index: 1;
+}
+
+.nav-link {
+    font-weight: light;
+    cursor: pointer;
+    padding-bottom: 0px !important;
+}
+
+.nav-link:hover {
+    /* color: #2b50aa; */
+    /* color: #00a2ed !important; */
+    color: #5a5a5a !important;
+}
+
+.link {
+    text-decoration: none;
+    color: #00a2ed;
+    cursor: pointer;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+/*Home component*/
+
+
+/*class to show components below navbar*/
+
+.mcontainer {
+    padding: 0px;
+    padding-top: 86px;
+    margin: 0px;
+}
