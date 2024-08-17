@@ -16,36 +16,20 @@ const Navbar = () => {
             Sulav
           </Link>
           <button
-            className="navbar-toggler navbarmenu"
+            className={`hamburger-toggler hamburger hamburger--spin ${
+              isNavbarOpen ? "is-active" : ""
+            }`}
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
-            aria-expanded="false"
+            aria-expanded={isNavbarOpen}
             aria-label="Toggle navigation"
             onClick={handleToggleNavbar}
           >
-            {isNavbarOpen ? (
-              // <span>&#10006;</span> //bold X
-              <span style={{ width: "1.5em", height: "1.5em" }}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="24"
-                  height="24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </span> //normal X
-            ) : (
-              <span className="navbar-toggler-icon"></span>
-            )}
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
           </button>
           <div
             className={`collapse navbar-collapse navbaritems ${
@@ -60,22 +44,22 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/events" className="nav-link active">
+                <Link to="/about" className="nav-link active">
                   About Me
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/about" className="nav-link active">
+                <Link to="/skills" className="nav-link active">
                   Skills
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/about" className="nav-link active">
+                <Link to="/projects" className="nav-link active">
                   Projects
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/about" className="nav-link active">
+                <Link to="/contact" className="nav-link active">
                   Contact
                 </Link>
               </li>

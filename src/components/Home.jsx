@@ -1,5 +1,7 @@
+import Hero from "./Hero";
+
 function Home() {
-  return <div className="mcontainer"></div>;
+  return <Hero />;
 }
 
 export default Home;

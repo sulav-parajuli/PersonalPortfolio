@@ -11,6 +11,20 @@
 }
 
 
+/* Define the fadeInUp animation */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
 /* Navbar Component */
 
 .logo {
@@ -18,6 +32,7 @@
     font-weight: 400;
     font-size: 2em;
     color: #00a2ed;
+    padding-bottom: 0px !important;
 }
 
 .logo:hover {
@@ -45,6 +60,12 @@
 
 .container-fluid {
     height: 70px;
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .hamburger-toggler {
+        display: none;
+    }
 }
 
 .Menuitem {
@@ -103,4 +124,201 @@
     padding: 0px;
     padding-top: 86px;
     margin: 0px;
+}
+
+
+/*Hero Component*/
+
+.hcontainer {
+    /*gradient background*/
+    background: rgb(255, 255, 255);
+    background: linear-gradient( 135deg, rgba(255, 255, 255, 1) 55%, rgba(0, 142, 176, 1) 100%);
+    /* background-color: #fff;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(0, 142, 176, 1) 100%
+    ); */
+    padding-top: 182px;
+    padding-bottom: 2%;
+    margin-right: 0px;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/* .main-event {
+    display: flex;
+    background-color: white;
+    margin-top: 2%;
+} */
+
+
+/* .events {
+    width: 100%;
+} */
+
+.text-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: justify;
+    align-items: flex-start;
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.maine.text-block {
+    padding-left: 0%;
+    padding-right: 15%;
+    text-align: justify;
+}
+
+.maine p.main-text {
+    margin-bottom: 8px;
+}
+
+.main-text {
+    font-size: 350%;
+    font-weight: bold;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+.sub-text {
+    font-size: 20px;
+    font-weight: light;
+    color: #5a5a5a;
+}
+
+.hero-container .main-text,
+.hero-container .sub-text,
+.hero-container .pb-0,
+.main-event .main-text,
+.main-event .sub-text {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.maine.buttons {
+    padding-left: 0%;
+}
+
+.main-button {
+    /* background-color: #2b50aa; */
+    background-color: #008eb0;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.main-button:last-child,
+.sub-button:last-child {
+    margin-right: 0;
+}
+
+.main-button:hover {
+    background-color: #00a9b8;
+}
+
+.sub-button {
+    background-color: transparent;
+    color: #008eb0;
+    border: 1px solid #008eb0;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.main-button,
+.sub-button {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sub-button:hover {
+    background-color: #008eb0;
+    color: white;
+}
+
+.image-container {
+    flex: 1;
+    width: auto;
+    height: auto;
+    padding-right: 5%;
+}
+
+.maine.image-container {
+    padding-right: 0%;
+}
+
+.main-image {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    top: 40px;
+}
+
+img.ticketcounter {
+    width: 60%;
+    height: auto;
+    object-fit: cover;
+    padding: 10%;
+    padding-right: 0%;
+    padding-left: 0%;
+    border-radius: 20px;
+    border-radius: 15%;
+}
+
+.main-event.text-container {
+    padding-left: 0px;
+}
+
+@media screen and (max-width: 1000px) {
+    img.ticketcounter {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    img.ticketcounter {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .maine.image-container {
+        display: none;
+    }
+    .main-event.text-container,
+    .maine.text-block,
+    .maine.buttons {
+        padding-left: 5%;
+    }
+    .browseevent {
+        padding-top: 15% !important;
+    }
 }
