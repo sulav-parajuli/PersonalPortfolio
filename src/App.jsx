@@ -5,6 +5,7 @@ import { AppProvider } from "./components/AppContext.jsx"; // Import AppProvider
 //Import other components
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
+import AboutMe from "./components/AboutMe.jsx";
 import Footer from "./components/Footer.jsx";
 // Import FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -43,6 +44,7 @@ const App = () => {
           <Routes>
             <>
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<AboutMe />} />
             </>
           </Routes>
           {/* "To the Top" button */}

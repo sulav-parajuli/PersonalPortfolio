@@ -159,6 +159,38 @@ const Projects = () => {
       ]
     },
     {
+      id: "j",
+      filter: "filter-web",
+      link: "https://github.com/sulav-parajuli/Swopnil-Store_new",
+      image: swopnilstore,
+      alt: "Grocery Application",
+      title: "Grocery Application",
+      subtitle: "Swopnil Store",
+      technologies: "HTML, CSS, JavaScript, Bootstrap, Laravel and more.",
+      previewText: `This grocery web application provides comprehensive information about the store, from essential details to dynamic updates. Users can explore various features, including store locations, a complete list of grocery items, their ledgers, and contact details. Designed for user convenience, it ensures a seamless shopping experience with intuitive navigation and up-to-date information, making grocery shopping more efficient and enjoyable. The application is currently in development, is not used externally, and does not have live access yet. `,
+      tags: [
+        {
+          link: "assets/images/portfolio/swopnilstore.png",
+          icon: "fas fa-plus",
+          text: "View"
+        },
+        {
+          link: "",
+          icon: "fas fa-external-link-alt",
+          text: "Visit Site"
+        },
+        {
+          link: "https://github.com/sulav-parajuli/Swopnil-Store_new",
+          icon: "fab fa-github",
+          text: "Github"
+        }
+      ]
+    }
+    // Add more project items here
+  ];
+
+  const otherItems = [
+    {
       id: "f",
       filter: "filter-games",
       link: "https://sulav-parajuli.github.io/Drum-kit/",
@@ -256,7 +288,7 @@ const Projects = () => {
       id: "i",
       filter: "filter-design",
       link: "https://www.facebook.com/swopnilstore",
-      image: macithub,
+      image: swgraphic,
       alt: "Graphics Designing",
       title: "Graphic Designing",
       subtitle: "Swopnil Store",
@@ -282,36 +314,7 @@ const Projects = () => {
           text: "Github"
         }
       ]
-    },
-    {
-      id: "j",
-      filter: "filter-web",
-      link: "https://github.com/sulav-parajuli/Swopnil-Store_new",
-      image: swopnilstore,
-      alt: "Grocery Application",
-      title: "Grocery Application",
-      subtitle: "Swopnil Store",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, Laravel and more.",
-      previewText: `This grocery web application provides comprehensive information about the store, from essential details to dynamic updates. Users can explore various features, including store locations, a complete list of grocery items, their ledgers, and contact details. Designed for user convenience, it ensures a seamless shopping experience with intuitive navigation and up-to-date information, making grocery shopping more efficient and enjoyable. The application is currently in development, is not used externally, and does not have live access yet. `,
-      tags: [
-        {
-          link: "assets/images/portfolio/swopnilstore.png",
-          icon: "fas fa-plus",
-          text: "View"
-        },
-        {
-          link: "",
-          icon: "fas fa-external-link-alt",
-          text: "Visit Site"
-        },
-        {
-          link: "https://github.com/sulav-parajuli/Swopnil-Store_new",
-          icon: "fab fa-github",
-          text: "Github"
-        }
-      ]
     }
-    // Add more project items here
   ];
 
   return (
@@ -319,35 +322,12 @@ const Projects = () => {
       <div className="container-fluid project-container">
         <div id="project" className="reveal">
           <p id="section-text">
-            <b>PROJECTS</b>
+            <b>SELECTED PROJECTS</b>
           </p>
-          <h1
-            id="bottom-gap"
-            className="main-text"
-            style={{ textAlign: "center" }}
-          >
+          <h1 id="bottom-gap" className="main-text">
             See my works
           </h1>
-          <div className="type">
-            <ul id="project-filters">
-              <li
-                data-filter="*"
-                className="filter-active"
-                onClick={() => list(0)}
-              >
-                All
-              </li>
-              <li data-filter=".filter-web" onClick={() => list(1)}>
-                Web, Apps
-              </li>
-              <li data-filter=".filter-design" onClick={() => list(2)}>
-                Designing
-              </li>
-              <li data-filter=".filter-games" onClick={() => list(3)}>
-                Games
-              </li>
-            </ul>
-          </div>
+
           {projectItems.map((item) => (
             <article
               key={item.id}
@@ -386,9 +366,55 @@ const Projects = () => {
               </div>
             </article>
           ))}
-          <a href="#">
-            <button className="main-button">Load More</button>
-          </a>
+        </div>
+      </div>
+      <div className="container-fluid project-container">
+        <div id="project" className="reveal">
+          <p id="section-text">
+            <b>GRAPHICS AND SIMPLE GAMES</b>
+          </p>
+          <h1 id="bottom-gap" className="main-text">
+            Other Works
+          </h1>
+
+          {otherItems.map((item) => (
+            <article
+              key={item.id}
+              className={`postcard blue text-black project-item ${item.filter}`}
+              data-filter={`.${item.filter}`}
+            >
+              <a className="postcard__img_link" href={item.link}>
+                <img
+                  className="postcard__img"
+                  src={item.image}
+                  alt={item.alt}
+                />
+              </a>
+              <div className="postcard__text">
+                <h1 className="postcard__title blue">
+                  <a href={item.link}>{item.title}</a>
+                </h1>
+                <div className="postcard__subtitle large">
+                  <p>{item.subtitle}</p>
+                </div>
+                <div className="postcard__bar"></div>
+                <div className="postcard__preview-txt">
+                  {item.previewText}
+                  <br />
+                  Technologies Used: {item.technologies}
+                </div>
+                <ul className="postcard__tagbox">
+                  {item.tags.map((tag, index) => (
+                    <li key={index} className="tag__item">
+                      <a href={tag.link}>
+                        <i className={tag.icon}></i>&nbsp;{tag.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </>

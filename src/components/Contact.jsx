@@ -2,47 +2,84 @@ const Contact = () => {
   return (
     <div className="container-fluid">
       <div id="contact" className="reveal">
-        <p id="section-text" style={{ textAlign: "center" }}>
+        <p id="section-text">
           <b>CONTACT</b>
         </p>
-        <h1
-          className="main-text"
-          id="bottom-gap"
-          style={{ textAlign: "center" }}
-        >
+        <h1 className="main-text" id="bottom-gap">
           Contact Me
         </h1>
-        <p style={{ textAlign: "center" }}>
+        <p style={{ textAlign: "justify" }}>
           I'd Love To Hear From You.
           {/* <br />Any valuable information between us
           must be safe. */}
         </p>
-        <form role="form" className="php-email-form p-3 p-md-4">
-          <div className="form-controller">
-            <div className="input-field fname form-group">
-              <input type="text" name="fname" id="name" required />
-              <label>Enter First Name</label>
+        <form role="form" className="php-email-form p-3 p-md-4 rounded">
+          <div className="row">
+            <div className="col-md-6 mb-3">
+              <div className="form-group">
+                <label className="form-label">Enter First Name</label>
+                <input
+                  type="text"
+                  name="fname"
+                  id="fname"
+                  className="form-control"
+                  required
+                />
+              </div>
             </div>
-            <div className="input-field lname form-group">
-              <input type="text" name="lname" id="name" required />
-              <label>Enter Last Name</label>
-            </div>
-            <div className="input-field email form-group">
-              <input type="email" name="email" id="email" required />
-              <label>Your Email</label>
-            </div>
-            <div className="input-field sub form-group">
-              <input type="text" name="subject" id="subject" required />
-              <label>Subject</label>
-            </div>
-            <div className="input-field message form-group">
-              <textarea name="message" rows="5" required></textarea>
-              <label>Your Message</label>
+            <div className="col-md-6 mb-3">
+              <div className="form-group">
+                <label className="form-label">Enter Last Name</label>
+                <input
+                  type="text"
+                  name="lname"
+                  id="lname"
+                  className="form-control"
+                  required
+                />
+              </div>
             </div>
           </div>
-          <button type="submit" className="main-button">
-            Send Message
-          </button>
+          <div className="mb-3">
+            <div className="form-group">
+              <label className="form-label">Your Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div className="mb-3">
+            <div className="form-group">
+              <label className="form-label">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                className="form-control"
+                required
+              />
+            </div>
+          </div>
+          <div className="mb-3">
+            <div className="form-group">
+              <label className="form-label">Your Message</label>
+              <textarea
+                name="message"
+                rows="5"
+                className="form-control"
+                required
+              ></textarea>
+            </div>
+          </div>
+          <div className="text-center">
+            <button type="submit" className="main-button">
+              Send Message
+            </button>
+          </div>
         </form>
       </div>
     </div>

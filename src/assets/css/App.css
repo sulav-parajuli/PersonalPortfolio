@@ -12,8 +12,9 @@
 
 #section-text {
   color: #00a2ed;
-  justify-items: center;
+  justify-items: justify;
   margin-bottom: 0%;
+  text-align: justify;
 }
 
 #bottom-gap {
@@ -262,14 +263,14 @@ div#type {
 .project-container {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: justify;
   gap: 15px;
   flex-wrap: wrap;
 }
 
 #project-filters {
   list-style: none;
-  text-align: center;
+  text-align: justify;
   padding: 2px 15px;
 }
 
@@ -354,8 +355,12 @@ div#type {
 
 #project {
   display: block;
-  text-align: center;
+  text-align: justify;
   padding: 4.5%;
+}
+
+.project-container h1 {
+  padding-bottom: 2rem;
 }
 
 article {
@@ -382,7 +387,7 @@ a:hover {
 #pageHeaderTitle {
   margin: 2rem 0;
   text-transform: uppercase;
-  text-align: center;
+  text-align: justify;
   font-size: 2.5rem;
 }
 
@@ -764,20 +769,16 @@ a:hover {
 
 input,
 textarea {
-  text-align: center;
+  text-align: justify;
   margin: 0;
 }
 
 .form-controller {
   display: flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: justify;
   flex-direction: column;
   padding-bottom: 15px;
-}
-
-.input-field {
-  position: relative;
 }
 
 .input-field input,
@@ -791,13 +792,8 @@ textarea {
 }
 
 .input-field label {
-  position: absolute;
-  top: 50%;
-  left: 16%;
-  transform: translateY(-50%);
+  transform: none;
   font-size: 19px;
-  pointer-events: none;
-  transition: 0.3s;
   background-color: white;
 }
 
@@ -828,8 +824,107 @@ textarea:valid ~ label {
 
 #contact {
   display: block;
-  text-align: center;
+  text-align: justify;
   padding: 4.5%;
+}
+
+/*About*/
+
+.acontainer {
+  padding-top: 120px;
+}
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5%;
+  gap: 5%;
+  padding-top: 2%;
+}
+
+#about {
+  padding: 2%;
+}
+
+#profile-img {
+  width: 50%;
+  align-items: center;
+  display: block;
+  position: relative;
+}
+
+#main-img {
+  margin-left: 20%;
+  border-radius: 100%;
+  height: 63%;
+  width: 63%;
+  z-index: 2;
+  position: relative;
+  transition: 0.5s ease-in-out;
+}
+
+.circle {
+  border-radius: 100%;
+  margin-left: 20%;
+  height: 100%;
+  width: 60%;
+  border: 5px solid #00a2ed;
+  background-color: transparent;
+  display: inline-block;
+  position: absolute;
+  left: 25%;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+}
+
+#profile-des,
+#skills,
+#services {
+  padding-right: 3%;
+}
+
+/* .services {
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  gap: 5%;
+} */
+
+#about_details {
+  padding-left: 4.5%;
+  justify-content: space-between;
+}
+
+#details {
+  align-items: flex-start;
+  width: 50%;
+  padding-left: 3%;
+}
+
+.about-container h1 {
+  font-family: "Ubuntu", sans-serif;
+  padding: 2.5%;
+}
+
+.about-container h2 {
+  margin-bottom: 10%;
+  font-family: "Rubik", sans-serif;
+}
+
+.about-container h3 {
+  margin-top: 5%;
+  font-family: "Rubik", sans-serif;
+}
+
+.about-container h3 i {
+  padding-right: 1.2%;
+}
+
+#skills {
+  width: 50%;
+  padding-left: 3%;
 }
 
 /*To the Top Button*/
