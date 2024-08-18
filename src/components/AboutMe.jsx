@@ -75,7 +75,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="container-fluid acontainer">
+    <div className="container-fluid acontainer pb-5">
       <div id="about" className="reveal about-container">
         <div id="profile-img">
           <img id="main-img" src={sulav} alt="Profile Image" />
@@ -109,9 +109,9 @@ const AboutMe = () => {
             <Link className="main-button" to="/#contact">
               Hire Me
             </Link>
-            <Link className="sub-button" download={CV}>
+            <a href={CV} download className=" sub-button">
               My Resume
-            </Link>
+            </a>
           </div>
         </div>
       </div>

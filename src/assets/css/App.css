@@ -828,6 +828,19 @@ textarea:valid ~ label {
   padding: 4.5%;
 }
 
+.social-links a {
+  font-size: 24px;
+  display: inline-block;
+  color: rgba(55, 55, 63, 0.7);
+  line-height: 1;
+  margin: 4px 6px 0 0;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+}
+
 /*About*/
 
 .acontainer {
