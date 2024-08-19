@@ -38,10 +38,15 @@ const Navbar = () => {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav item me-auto mb-lg-0">
-              <li className="nav-item ms-5">
+              {/* <li className="nav-item ms-5">
                 <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
+              </li> */}
+              <li className="nav-item ms-5">
+                <a href="/#project" className="nav-link active">
+                  Projects
+                </a>
               </li>
               <li className="nav-item ms-5">
                 <Link to="/about" className="nav-link active">
@@ -51,11 +56,6 @@ const Navbar = () => {
               <li className="nav-item ms-5">
                 <a href="/about/#skills" className="nav-link active">
                   Skills
-                </a>
-              </li>
-              <li className="nav-item ms-5">
-                <a href="/#project" className="nav-link active">
-                  Projects
                 </a>
               </li>
               <li className="nav-item ms-5">

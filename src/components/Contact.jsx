@@ -13,14 +13,35 @@ const Contact = () => {
           {/* <br />Any valuable information between us
           must be safe. */}
         </p>
-        <form role="form" className="php-email-form p-3 p-md-4 rounded">
+        <form
+          role="form"
+          className="php-email-form p-3 p-md-4 rounded"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+        >
           <div className="row">
             <div className="col-md-6 mb-3">
               <div className="form-group">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="f4bb19c5-ac64-42ee-8775-b94fa4c265ed"
+                />
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value="https://web3forms.com/success"
+                />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  className="hidden"
+                  style={{ display: "none" }}
+                />
                 <label className="form-label">Enter First Name</label>
                 <input
                   type="text"
-                  name="fname"
+                  name="First Name"
                   id="fname"
                   className="form-control"
                   required

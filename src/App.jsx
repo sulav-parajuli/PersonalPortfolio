@@ -8,6 +8,7 @@ import Home from "./components/Home.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import Error from "./components/Error.jsx";
 // Import FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
@@ -48,6 +49,8 @@ const App = () => {
               <Route path="/PersonalPortfolio" element={<Home />} />
               <Route path="/about" element={<AboutMe />} />
               <Route path="/contact" element={<Contact />} />
+              {/* Catch-all other routes for displaying an error page */}
+              <Route path="*" element={<Error />} />
             </>
           </Routes>
           {/* "To the Top" button */}
