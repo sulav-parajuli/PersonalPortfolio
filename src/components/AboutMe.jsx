@@ -106,7 +106,7 @@ const AboutMe = () => {
             contributing to the world of technology.
           </p>
           <div className="buttons">
-            <Link className="main-button" to="/#contact">
+            <Link className="main-button" to="/contact">
               Hire Me
             </Link>
             <a href={CV} download className=" sub-button">
