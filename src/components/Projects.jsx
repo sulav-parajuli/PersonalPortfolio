@@ -7,6 +7,7 @@ import simon from "../assets/images/project/simon.png";
 import macithub from "../assets/images/project/macithub.png";
 import jazzyventure from "../assets/images/project/jazzyventure.png";
 import drumkit from "../assets/images/project/drum-kit.png";
+import graphicstimeline from "../assets/images/project/graphicstimeline.png";
 
 const Projects = () => {
   const projectItems = [
@@ -24,7 +25,7 @@ const Projects = () => {
         "Solidity, Ether.js, React.js, Node.js, Hardhat Framework, Sepolia Test Eth, and more.",
       tags: [
         {
-          link: "assets/images/project/ethtix.png",
+          link: "../assets/images/project/ethtix.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -53,7 +54,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
       tags: [
         {
-          link: "assets/images/project/rajendrakhatri.png",
+          link: "../assets/images/project/rajendrakhatri.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -82,7 +83,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
       tags: [
         {
-          link: "assets/images/project/bibek.png",
+          link: "../assets/images/project/bibek.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -110,7 +111,7 @@ const Projects = () => {
       technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
       tags: [
         {
-          link: "assets/images/portfolio/jazzyventure.png",
+          link: "../assets/images/portfolio/jazzyventure.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -142,7 +143,7 @@ const Projects = () => {
           for this business.`,
       tags: [
         {
-          link: "assets/images/portfolio/swopnilstore.png",
+          link: "../assets/images/portfolio/swopnilstore.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -170,7 +171,7 @@ const Projects = () => {
       previewText: `This grocery web application provides comprehensive information about the store, from essential details to dynamic updates. Users can explore various features, including store locations, a complete list of grocery items, their ledgers, and contact details. Designed for user convenience, it ensures a seamless shopping experience with intuitive navigation and up-to-date information, making grocery shopping more efficient and enjoyable. The application is currently in development, is not used externally, and does not have live access yet. `,
       tags: [
         {
-          link: "assets/images/portfolio/swopnilstore.png",
+          link: "../assets/images/portfolio/swopnilstore.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -205,7 +206,7 @@ const Projects = () => {
               game after taking a course on Udemy instructed by Angela Yu.`,
       tags: [
         {
-          link: "assets/images/portfolio/drum-kit.png",
+          link: "../assets/images/portfolio/drum-kit.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -237,7 +238,7 @@ const Projects = () => {
               instructed by Angela Yu.`,
       tags: [
         {
-          link: "assets/images/portfolio/simon.png",
+          link: "../assets/images/portfolio/simon.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -268,7 +269,7 @@ const Projects = () => {
               and events.`,
       tags: [
         {
-          link: "assets/images/portfolio/macithub.png",
+          link: "../assets/images/portfolio/macithub.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -299,7 +300,7 @@ const Projects = () => {
               products and services.`,
       tags: [
         {
-          link: "assets/images/portfolio/swopnilstoregraphics.png",
+          link: "../assets/images/portfolio/swopnilstoregraphics.png",
           icon: "fas fa-plus",
           text: "View"
         },
@@ -307,6 +308,34 @@ const Projects = () => {
           link: "https://www.facebook.com/swopnilstore",
           icon: "fas fa-external-link-alt",
           text: "Visit Site"
+        },
+        {
+          link: "",
+          icon: "fab fa-github",
+          text: "Github"
+        }
+      ]
+    },
+    {
+      id: "k",
+      filter: "filter-design",
+      link: "../assets/images/portfolio/graphics timeline.mp4",
+      image: graphicstimeline,
+      alt: "Graphics Designing",
+      title: "Graphic Timeline Design Art",
+      subtitle: "Sketch Timeline",
+      technologies: "Adobe Photoshop, Adobe Illustrator, and more.",
+      previewText: `This graphic timeline artwork, created using Adobe Photoshop, beautifully illustrates the evolution of my photo through various stages of artistic transformation. Each frame captures a distinct moment in the creative process, showcasing the transition from a plain white artboard to the final piece.`,
+      tags: [
+        {
+          link: "../assets/images/portfolio/graphicstimeline.png",
+          icon: "fas fa-plus",
+          text: "View"
+        },
+        {
+          link: "../assets/images/portfolio/graphics timeline.mp4",
+          icon: "fas fa-external-link-alt",
+          text: "View Art Work"
         },
         {
           link: "",
@@ -355,13 +384,22 @@ const Projects = () => {
                   Technologies Used: {item.technologies}
                 </div>
                 <ul className="postcard__tagbox">
-                  {item.tags.map((tag, index) => (
-                    <li key={index} className="tag__item">
-                      <a href={tag.link}>
-                        <i className={tag.icon}></i>&nbsp;{tag.text}
-                      </a>
-                    </li>
-                  ))}
+                  <li className="tag__item">
+                    <a href={item.tags[0].link} className="glightbox">
+                      <i className="fas fa-plus"></i>&nbsp;{item.tags[0].text}
+                    </a>
+                  </li>
+                  <li className="tag__item">
+                    <a href={item.tags[1].link}>
+                      <i className="fas fa-external-link-alt"></i>&nbsp;
+                      {item.tags[1].text}
+                    </a>
+                  </li>
+                  <li className="tag__item">
+                    <a href={item.tags[2].link}>
+                      <i className="fab fa-github"></i>&nbsp;{item.tags[2].text}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </article>
@@ -403,7 +441,7 @@ const Projects = () => {
                   <br />
                   Technologies Used: {item.technologies}
                 </div>
-                <ul className="postcard__tagbox">
+                {/* <ul className="postcard__tagbox">
                   {item.tags.map((tag, index) => (
                     <li key={index} className="tag__item">
                       <a href={tag.link}>
@@ -411,6 +449,24 @@ const Projects = () => {
                       </a>
                     </li>
                   ))}
+                </ul> */}
+                <ul className="postcard__tagbox">
+                  <li className="tag__item">
+                    <a href={item.tags[0].link} className="glightbox">
+                      <i className="fas fa-plus"></i>&nbsp;{item.tags[0].text}
+                    </a>
+                  </li>
+                  <li className="tag__item">
+                    <a href={item.tags[1].link}>
+                      <i className="fas fa-external-link-alt"></i>&nbsp;
+                      {item.tags[1].text}
+                    </a>
+                  </li>
+                  <li className="tag__item">
+                    <a href={item.tags[2].link}>
+                      <i className="fab fa-github"></i>&nbsp;{item.tags[2].text}
+                    </a>
+                  </li>
                 </ul>
               </div>
             </article>

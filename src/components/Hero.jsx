@@ -38,10 +38,17 @@ const Hero = () => {
               </p>
             </div>
             <div className="buttons">
-              <Link to="/#project" className="main-button">
+              <Link
+                to="/#project"
+                smooth={true}
+                duration={500}
+                className="main-button  no-smooth-scroll"
+              >
                 View Projects
               </Link>
-              <button className="sub-button">Read About Me</button>
+              <Link className="sub-button" to="/about">
+                Read About Me
+              </Link>
             </div>
           </div>
           <div className="col-md-6 image-container">

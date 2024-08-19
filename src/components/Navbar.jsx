@@ -54,19 +54,19 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/projects" className="nav-link active">
+                <Link to="/#project" className="nav-link active">
                   Projects
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/contact" className="nav-link active">
+                <Link to="/#contact" className="nav-link active">
                   Contact
                 </Link>
               </li>
             </ul>
             <ul className="navbar-nav item ms-auto mb-lg-0">
               <li className="nav-item ms-5 mr-5">
-                <Link to="/login" className="nav-link active">
+                <Link to="" className="nav-link active">
                   Login
                 </Link>
               </li>
