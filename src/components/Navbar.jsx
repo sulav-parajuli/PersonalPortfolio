@@ -49,17 +49,17 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/skills" className="nav-link active">
+                <Link to="/about/#skills" className="nav-link active">
                   Skills
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/#project" className="nav-link active">
+                <a href="/#project" className="nav-link active">
                   Projects
-                </Link>
+                </a>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/#contact" className="nav-link active">
+                <Link to="/contact" className="nav-link active">
                   Contact
                 </Link>
               </li>

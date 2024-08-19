@@ -205,6 +205,25 @@ const AboutMe = () => {
                   </button>
                 </div>
               </div>
+              <div className="col-lg-12">
+                <p className="text-center mt-3">
+                  <small>
+                    <i>
+                      *These are some of the skills I have. I am always learning
+                      new things and expanding my knowledge.
+                    </i>
+                  </small>
+                </p>
+                <p>Some of the other skills that i can work well with are:.</p>
+                <p>
+                  <ol>
+                    <li>Graphic Designing</li>
+                    <li>Video Editing</li>
+                    <li>UI/UX</li>
+                    <li>SEO etc.</li>
+                  </ol>
+                </p>
+              </div>
             </div>
           </div>
         </div>

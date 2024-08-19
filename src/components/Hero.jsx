@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import sulav from "../assets/images/profile/sulav.png";
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
 
   useEffect(() => {
     const typed = new Typed(typingRef.current, {
-      strings: ["Developer", "Designer", "Freelancer"],
+      strings: ["Developer", "Designer"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true
@@ -39,16 +40,16 @@ const Hero = () => {
             </div>
             <div className="buttons">
               <Link
-                to="/#project"
+                to="project"
                 smooth={true}
                 duration={500}
                 className="main-button  no-smooth-scroll"
               >
                 View Projects
               </Link>
-              <Link className="sub-button" to="/about">
+              <a className="sub-button" href="/about">
                 Read About Me
-              </Link>
+              </a>
             </div>
           </div>
           <div className="col-md-6 image-container">

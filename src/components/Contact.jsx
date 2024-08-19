@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div className="container-fluid">
       <div id="contact" className="reveal">
-        <p id="section-text">
+        <p id="section-text" className="pt-2">
           <b>CONTACT</b>
         </p>
         <h1 className="main-text" id="bottom-gap">
