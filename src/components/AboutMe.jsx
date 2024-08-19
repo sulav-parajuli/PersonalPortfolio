@@ -223,7 +223,9 @@ const AboutMe = () => {
                     <li>SEO etc.</li>
                   </ol>
                 </p>
-                <Link className="main-button">My Skills and Experience</Link>
+                <Link to="/skills" className="main-button">
+                  My Skills and Experience
+                </Link>
               </div>
             </div>
           </div>

@@ -945,9 +945,27 @@ textarea:valid ~ label {
   padding-right: 1.2%;
 }
 
+.scontainer {
+  padding-top: 70px;
+}
+
 #skills {
   width: 50%;
   padding-left: 3%;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  visibility: visible;
+  opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #00a2ed;
+  /* Example to make icons more visible */
+  border-radius: 50%;
+  padding: 10px;
 }
 
 /*To the Top Button*/

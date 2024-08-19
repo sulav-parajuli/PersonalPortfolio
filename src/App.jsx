@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { AppProvider } from "./components/AppContext.jsx"; // Import AppProvider
 //Import other components
 import Navbar from "./components/Navbar.jsx";
 import Home from "./components/Home.jsx";
 import AboutMe from "./components/AboutMe.jsx";
+import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import Error from "./components/Error.jsx";
@@ -41,26 +41,25 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <AppProvider>
-          <Navbar />
-          <Routes>
-            <>
-              <Route path="/" element={<Home />} />
-              <Route path="/PersonalPortfolio" element={<Home />} />
-              <Route path="/about" element={<AboutMe />} />
-              <Route path="/contact" element={<Contact />} />
-              {/* Catch-all other routes for displaying an error page */}
-              <Route path="*" element={<Error />} />
-            </>
-          </Routes>
-          {/* "To the Top" button */}
-          {showToTopButton && (
-            <button className="btn to-top-button" onClick={handleToTopClick}>
-              <FontAwesomeIcon icon={faArrowUp} />
-            </button>
-          )}
-          <Footer />
-        </AppProvider>
+        <Navbar />
+        <Routes>
+          <>
+            <Route path="/" element={<Home />} />
+            <Route path="/PersonalPortfolio" element={<Home />} />
+            <Route path="/about" element={<AboutMe />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/skills" element={<Skills />} />
+            {/* Catch-all other routes for displaying an error page */}
+            <Route path="*" element={<Error />} />
+          </>
+        </Routes>
+        {/* "To the Top" button */}
+        {showToTopButton && (
+          <button className="btn to-top-button" onClick={handleToTopClick}>
+            <FontAwesomeIcon icon={faArrowUp} />
+          </button>
+        )}
+        <Footer />
       </BrowserRouter>
     </>
   );

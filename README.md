@@ -2,6 +2,8 @@
 
 Welcome to my personal portfolio project! This repository showcases my work as a web developer, including various projects, skills, and experiences. The portfolio is built using modern web technologies and aims to provide a comprehensive view of my capabilities and achievements.
 
+![Personal Portfolio](./src/assets/images/project/PersonalPortfolio.png)
+
 ## Live Demo
 
 You can view the live version at: https://sulav-parajuli.github.io/PersonalPortfolio/
