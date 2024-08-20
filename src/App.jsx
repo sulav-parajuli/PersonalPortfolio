@@ -7,11 +7,14 @@ import Home from "./components/Home.jsx";
 import AboutMe from "./components/AboutMe.jsx";
 import Skills from "./components/Skills.jsx";
 import Contact from "./components/Contact.jsx";
+import ProjectDetail from "./components/ProjectDetail.jsx";
 import Footer from "./components/Footer.jsx";
 import Error from "./components/Error.jsx";
 // Import FontAwesome icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+//Import projects.json file
+import projects from "./data/projects.json"; // Import the JSON file
 
 const App = () => {
   const [showToTopButton, setShowToTopButton] = useState(false);
@@ -45,10 +48,23 @@ const App = () => {
         <Routes>
           <>
             <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Home />} />
+            <Route path="/PersonalPortfolio/projects" element={<Home />} />
             <Route path="/PersonalPortfolio" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/PersonalPortfolio/about" element={<AboutMe />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/PersonalPortfolio/contact" element={<Contact />} />
             <Route path="/skills" element={<Skills />} />
+            <Route path="/PersonalPortfolio/skills" element={<Skills />} />
+            <Route
+              path="/projects/:id"
+              element={<ProjectDetail projects={projects} />}
+            />
+            <Route
+              path="/PersonalPortfolio/projects/:id"
+              element={<ProjectDetail projects={projects} />}
+            />
             {/* Catch-all other routes for displaying an error page */}
             <Route path="*" element={<Error />} />
           </>

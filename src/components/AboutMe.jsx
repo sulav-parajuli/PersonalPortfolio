@@ -220,7 +220,8 @@ const AboutMe = () => {
                     <li>Graphic Designing</li>
                     <li>Video Editing</li>
                     <li>UI/UX</li>
-                    <li>SEO etc.</li>
+                    <li>API|Manual Testing </li>
+                    <li>SEO</li>
                   </ol>
                 </p>
                 <Link to="/skills" className="main-button">

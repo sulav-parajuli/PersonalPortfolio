@@ -12,7 +12,12 @@ const Navbar = () => {
     <>
       <nav className="navbar topnav navbar-expand-lg fixed-top mb-5">
         <div className="container-fluid">
-          <Link to="/" className="navbar-brand ms-5 logo">
+          <Link
+            to={`${
+              process.env.NODE_ENV === "production" ? "/PersonalPortfolio" : ""
+            }/`}
+            className="navbar-brand ms-5 logo"
+          >
             Sulav
           </Link>
           <button
@@ -44,22 +49,50 @@ const Navbar = () => {
                 </Link>
               </li> */}
               <li className="nav-item ms-5">
-                <a href="/#project" className="nav-link active">
+                <a
+                  href={`${
+                    process.env.NODE_ENV === "production"
+                      ? "/PersonalPortfolio"
+                      : ""
+                  }/#project`}
+                  className="nav-link active"
+                >
                   Projects
                 </a>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/about" className="nav-link active">
+                <Link
+                  to={`${
+                    process.env.NODE_ENV === "production"
+                      ? "/PersonalPortfolio"
+                      : ""
+                  }/about`}
+                  className="nav-link active"
+                >
                   About Me
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/skills" className="nav-link active">
+                <Link
+                  to={`${
+                    process.env.NODE_ENV === "production"
+                      ? "/PersonalPortfolio"
+                      : ""
+                  }/skills`}
+                  className="nav-link active"
+                >
                   Skills
                 </Link>
               </li>
               <li className="nav-item ms-5">
-                <Link to="/contact" className="nav-link active">
+                <Link
+                  to={`${
+                    process.env.NODE_ENV === "production"
+                      ? "/PersonalPortfolio"
+                      : ""
+                  }/contact`}
+                  className="nav-link active"
+                >
                   Contact
                 </Link>
               </li>

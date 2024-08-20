@@ -19,7 +19,11 @@ function Footer() {
           <ul className="list-unstyled d-flex justify-content-center mb-4">
             <li>
               <Link
-                to="/about"
+                to={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/about`}
                 className="text-white text-decoration-none mx-2"
               >
                 About Me
@@ -27,7 +31,11 @@ function Footer() {
             </li>
             <li>
               <Link
-                to="/contact"
+                to={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/contact`}
                 className="text-white text-decoration-none mx-2"
               >
                 Contact
@@ -35,20 +43,35 @@ function Footer() {
             </li>
             <li>
               <Link
-                to="/about/#skills"
+                to={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/skills`}
                 className="text-white text-decoration-none mx-2"
               >
                 Skills
               </Link>
             </li>
             <li>
-              <Link to="/" className="text-white text-decoration-none mx-2">
+              <Link
+                to={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/`}
+                className="text-white text-decoration-none mx-2"
+              >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                to="/#project"
+                to={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/#project`}
                 className="text-white text-decoration-none mx-2"
               >
                 Projects

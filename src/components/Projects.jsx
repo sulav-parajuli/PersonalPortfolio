@@ -1,3 +1,6 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+//import files
 import rajendrakhatri from "../assets/images/project/rajendrakhatri.png";
 import EthTix from "../assets/images/project/ethtix.png";
 import bibek from "../assets/images/project/bibek.png";
@@ -8,8 +11,11 @@ import macithub from "../assets/images/project/macithub.png";
 import jazzyventure from "../assets/images/project/jazzyventure.png";
 import drumkit from "../assets/images/project/drum-kit.png";
 import graphicstimeline from "../assets/images/project/graphicstimeline.png";
+//import components
+import ProjectDetail from "./ProjectDetail";
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
   const projectItems = [
     {
       id: "a",
@@ -51,7 +57,7 @@ const Projects = () => {
       subtitle: "Rajendra Khatri",
       previewText:
         "This is a simple portfolio website for Rajendra Khatri, a Business Man. The website showcases his work and provides information about his services.",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       tags: [
         {
           link: "../assets/images/project/rajendrakhatri.png",
@@ -80,7 +86,7 @@ const Projects = () => {
       subtitle: "Bibek Bajagain",
       previewText:
         "This is a simple portfolio website for Bibek Bajagain, a Genius Developer. The website showcases his work and provides information about his services.",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       tags: [
         {
           link: "../assets/images/project/bibek.png",
@@ -108,7 +114,7 @@ const Projects = () => {
       title: "Company Website",
       subtitle: "Jazzy Venture",
       previewText: `This website is a static site providing basic information about the company "Jazzy Venture Pvt. Ltd.", including its locations and contact details.`,
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       tags: [
         {
           link: "../assets/images/portfolio/jazzyventure.png",
@@ -135,7 +141,7 @@ const Projects = () => {
       alt: "Grocery Website",
       title: "Simple Grocery Website",
       subtitle: "Swopnil Store",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       previewText: `This is a simple static grocery website providing basic
               information about the grocery store, including its locations and
               contact details. The website is integrated with SEO through Google Search Console. Additionally, I have set up a
@@ -167,7 +173,8 @@ const Projects = () => {
       alt: "Grocery Application",
       title: "Grocery Application",
       subtitle: "Swopnil Store",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, Laravel and more.",
+      technologies:
+        "HTML, CSS, JavaScript, Blade, Bootstrap, Laravel, Google recaptcha, MySql, Xampp, Apache etc.",
       previewText: `This grocery web application provides comprehensive information about the store, from essential details to dynamic updates. Users can explore various features, including store locations, a complete list of grocery items, their ledgers, and contact details. Designed for user convenience, it ensures a seamless shopping experience with intuitive navigation and up-to-date information, making grocery shopping more efficient and enjoyable. The application is currently in development, is not used externally, and does not have live access yet. `,
       tags: [
         {
@@ -199,7 +206,7 @@ const Projects = () => {
       alt: "Drum Kit",
       title: "Drum Kit",
       subtitle: "Drum Game",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       previewText: `This is a simple Drum Kit game that I created while learning
               JavaScript. It is a fun and interactive game that allows users to
               play the drums using their keyboard. I was inspired to create this
@@ -230,7 +237,7 @@ const Projects = () => {
       alt: "Simon Game",
       title: "Simon Game",
       subtitle: "Repeated Sequence Mind Game",
-      technologies: "HTML, CSS, JavaScript, Bootstrap, and more.",
+      technologies: "HTML, CSS, JavaScript, JQuery and Bootstrap",
       previewText: `This is a simple Simon Game that I created while learning
               JavaScript. It is a fun and interactive game that allows users to
               test their memory by repeating a sequence of colors. I was
@@ -262,7 +269,7 @@ const Projects = () => {
       alt: "Graphics Designing",
       title: "Graphic Designing",
       subtitle: "Macithub",
-      technologies: "Adobe Photoshop, Adobe Illustrator, and more.",
+      technologies: "Adobe Photoshop, Adobe Illustrator etc.",
       previewText: `These are simple social media graphic designs that I created for
               the Macithub Student Club at my college. The designs showcase the
               club's logo and provide information about the club's activities
@@ -293,7 +300,7 @@ const Projects = () => {
       alt: "Graphics Designing",
       title: "Graphic Designing",
       subtitle: "Swopnil Store",
-      technologies: "Adobe Photoshop, Adobe Illustrator, and more.",
+      technologies: "Adobe Photoshop, Adobe Illustrator etc.",
       previewText: `These are simple social media graphic designs that I created for
               Swopnil Store, a grocery store in Pokhara. The designs showcase
               the store's logo and provide information about the store's
@@ -324,7 +331,7 @@ const Projects = () => {
       alt: "Graphics Designing",
       title: "Graphic Timeline Design Art",
       subtitle: "Sketch Timeline",
-      technologies: "Adobe Photoshop, Adobe Illustrator, and more.",
+      technologies: "Adobe Photoshop, Adobe Illustrator etc.",
       previewText: `This graphic timeline artwork, created using Adobe Photoshop, beautifully illustrates the evolution of my photo through various stages of artistic transformation. Each frame captures a distinct moment in the creative process, showcasing the transition from a plain white artboard to the final piece.`,
       tags: [
         {
@@ -385,9 +392,12 @@ const Projects = () => {
                 </div>
                 <ul className="postcard__tagbox">
                   <li className="tag__item">
-                    <a href={item.tags[0].link} className="glightbox">
+                    <Link
+                      to={`/projects/${item.id}`}
+                      onClick={() => setSelectedProject(item)}
+                    >
                       <i className="fas fa-plus"></i>&nbsp;{item.tags[0].text}
-                    </a>
+                    </Link>
                   </li>
                   <li className="tag__item">
                     <a href={item.tags[1].link}>
@@ -404,6 +414,7 @@ const Projects = () => {
               </div>
             </article>
           ))}
+          {selectedProject && <ProjectDetail {...selectedProject} />}
         </div>
       </div>
       <div className="container-fluid project-container">
@@ -452,9 +463,12 @@ const Projects = () => {
                 </ul> */}
                 <ul className="postcard__tagbox">
                   <li className="tag__item">
-                    <a href={item.tags[0].link} className="glightbox">
+                    <Link
+                      to={`/projects/${item.id}`}
+                      onClick={() => setSelectedProject(item)}
+                    >
                       <i className="fas fa-plus"></i>&nbsp;{item.tags[0].text}
-                    </a>
+                    </Link>
                   </li>
                   <li className="tag__item">
                     <a href={item.tags[1].link}>
@@ -471,6 +485,7 @@ const Projects = () => {
               </div>
             </article>
           ))}
+          {selectedProject && <ProjectDetail {...selectedProject} />}
         </div>
       </div>
     </>
