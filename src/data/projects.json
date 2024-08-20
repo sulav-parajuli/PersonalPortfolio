@@ -91,7 +91,7 @@
     "technologies": "HTML, CSS, JavaScript, JQuery and Bootstrap",
     "tags": [
       {
-        "link": "../assets/images/portfolio/jazzyventure.png",
+        "link": "../assets/images/project/jazzyventure.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -118,7 +118,7 @@
     "previewText": "This is a simple static grocery website providing basic information about the grocery store, including its locations and contact details.The website is integrated with SEO through Google Search Console. Additionally,I haveset up a Google Business profile for this business.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/swopnilstore.png",
+        "link": "../assets/images/project/swopnilstore.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -145,7 +145,7 @@
     "previewText": "This grocery web application provides comprehensive information about the store, from essential details to dynamic updates. Users can explore various features, including store locations, a complete list of grocery items, their ledgers, and contact details. Designed for user convenience, it ensures a seamless shopping experience with intuitive navigation and up-to-date information, making grocery shopping more efficient and enjoyable. The application is currently in development, is not used externally, and does not have live access yet.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/swopnilstore.png",
+        "link": "../assets/images/project/swopnilstore.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -172,7 +172,7 @@
     "previewText": "This is a simple Drum Kit game that I created while learning JavaScript. It is a fun and interactive game that allows users to play the drums using their keyboard. I was inspired to create this game after taking a course on Udemy instructed by Angela Yu.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/drum-kit.png",
+        "link": "../assets/images/project/drum-kit.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -199,7 +199,7 @@
     "previewText": "This is a simple Simon Game that I created while learning JavaScript. It is a fun and interactive game that allows users to test their memory by repeating a sequence of colors. I was inspired to create this game after taking a course on Udemy instructed by Angela Yu.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/simon.png",
+        "link": "../assets/images/project/simon.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -226,7 +226,7 @@
     "previewText": "These are simple social media graphic designs that I created for the Macithub Student Club at my college. The designs showcase the club's logo and provide information about the club's activities and events.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/macithub.png",
+        "link": "../assets/images/project/macithub.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -253,7 +253,7 @@
     "previewText": "These are simple social media graphic designs that I created for Swopnil Store, a grocery store in Pokhara. The designs showcase the store's logo and provide information about the store's products and services.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/swopnilstoregraphics.png",
+        "link": "../assets/images/project/swopnilstoregraphics.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
@@ -272,7 +272,7 @@
   {
     "id": "k",
     "filter": "filter-design",
-    "link": "../assets/images/portfolio/graphics timeline.mp4",
+    "link": "../assets/images/project/graphics timeline.mp4",
     "alt": "Graphics Designing",
     "title": "Graphic Timeline Design Art",
     "subtitle": "Sketch Timeline",
@@ -280,12 +280,12 @@
     "previewText": "This graphic timeline artwork, created using Adobe Photoshop, beautifully illustrates the evolution of my photo through various stages of artistic transformation. Each frame captures a distinct moment in the creative process, showcasing the transition from a plain white artboard to the final piece.",
     "tags": [
       {
-        "link": "../assets/images/portfolio/graphicstimeline.png",
+        "link": "../assets/images/project/graphicstimeline.png",
         "icon": "fas fa-plus",
         "text": "View"
       },
       {
-        "link": "../assets/images/portfolio/graphics timeline.mp4",
+        "link": "../assets/images/project/graphics timeline.mp4",
         "icon": "fas fa-external-link-alt",
         "text": "View Art Work"
       },
