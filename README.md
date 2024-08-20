@@ -11,8 +11,11 @@ You can view the live version at: https://sulav-parajuli.github.io/PersonalPortf
 ## Technologies Used
 
 - **React**: For building the user interface and managing state.
+- **JSX**: For writing HTML elements in JavaScript and making the code easier to understand.
 - **Vite**: For a fast development experience and optimized builds.
 - **Bootstrap**: For styling and ensuring a responsive layout.
+- **Typed.js**: For adding dynamic typing animations.
+- **Web3 Forms**: For handling form submissions securely and efficiently.
 - **Font Awesome**: For icons and visual enhancements.
 - **HTML/CSS**: For structuring and styling the content.
 
