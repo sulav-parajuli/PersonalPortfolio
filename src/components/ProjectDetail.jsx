@@ -28,7 +28,7 @@ const getMediaPath = (filePath) => {
   }
 
   // Construct the full path
-  let fullPath = `${adjustedBasePath}/${filePath}`;
+  let fullPath = `${adjustedBasePath}${filePath}`;
 
   // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
   if (!fullPath.includes("/PersonalPortfolio")) {

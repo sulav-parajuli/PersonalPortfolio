@@ -14,7 +14,7 @@ const Projects = () => {
       const basePath = import.meta.env.BASE_URL;
 
       // Construct the full path
-      let fullPath = `${basePath}/${filePath}`;
+      let fullPath = `${basePath}${filePath}`;
 
       // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
       if (!fullPath.includes("/PersonalPortfolio")) {
