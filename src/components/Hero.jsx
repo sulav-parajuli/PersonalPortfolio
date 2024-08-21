@@ -47,7 +47,14 @@ const Hero = () => {
               >
                 View Projects
               </Link>
-              <a className="sub-button" href="/about">
+              <a
+                href={`${
+                  process.env.NODE_ENV === "production"
+                    ? "/PersonalPortfolio"
+                    : ""
+                }/about`}
+                className="sub-button"
+              >
                 Read About Me
               </a>
             </div>
