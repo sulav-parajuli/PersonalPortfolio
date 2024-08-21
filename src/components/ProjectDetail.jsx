@@ -18,22 +18,26 @@ import Error from "./Error.jsx";
 // };
 
 const getMediaPath = (filePath) => {
-  let basePath = window.location.pathname;
+  const basePath = import.meta.env.BASE_URL;
 
+  // Check if the basePath ends with "projects" or "projects/:id"
+  let adjustedBasePath = basePath;
   // Remove everything after "/projects/" (including the ID)
   if (basePath.includes("/projects/")) {
-    basePath = basePath.split("/projects/")[0];
+    adjustedBasePath = basePath.split("/projects/")[0];
   }
 
   // Construct the full path
-  let fullPath = `${basePath}/${filePath}`;
+  let fullPath = `${adjustedBasePath}/${filePath}`;
 
   // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
   if (!fullPath.includes("/PersonalPortfolio")) {
     fullPath = "/PersonalPortfolio" + fullPath;
   }
 
-  return fullPath;
+  // Return the correct path
+  return new URL(`${fullPath}`, import.meta.url).href;
+  // return fullPath;
 };
 
 const ProjectDetail = () => {

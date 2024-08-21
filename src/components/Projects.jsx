@@ -9,17 +9,20 @@ const Projects = () => {
   const [selectedProjects, setSelectedProjects] = useState([]);
   const [otherProjects, setOtherProjects] = useState([]);
 
-  const getImagePath = (imageName) => {
+  const getImagePath = (filePath) => {
     try {
-      // Check if the environment is local or on GitHub Pages
-      const isLocalEnv =
-        window.location.hostname === "localhost" ||
-        window.location.hostname === "127.0.0.1";
+      const basePath = import.meta.env.BASE_URL;
 
-      // Set the base path depending on the environment
-      const basePath = isLocalEnv ? "" : "/PersonalPortfolio/";
+      // Construct the full path
+      let fullPath = `${basePath}/${filePath}`;
 
-      return `${basePath}${imageName}`;
+      // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
+      if (!fullPath.includes("/PersonalPortfolio")) {
+        fullPath = "/PersonalPortfolio" + fullPath;
+      }
+
+      // Return the correct path
+      return new URL(`${fullPath}`, import.meta.url).href;
     } catch (error) {
       console.error("Error loading image:", error);
       return null;
