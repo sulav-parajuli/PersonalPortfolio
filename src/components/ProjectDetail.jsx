@@ -3,20 +3,6 @@ import { useParams } from "react-router-dom";
 import projects from "../data/projects.json"; // Import the JSON file
 import Error from "./Error.jsx";
 
-// // Utility function to get the correct path for images and videos
-// const getMediaPath = (filePath) => {
-//   const isLocalEnv =
-//     window.location.hostname === "localhost" ||
-//     window.location.hostname === "127.0.0.1";
-//   const basePath = isLocalEnv ? "" : "/PersonalPortfolio/";
-//   let baseUrl = `${basePath}${filePath}`;
-//   // Check if baseUrl contains "/projects" and remove it
-//   if (baseUrl.includes("/projects")) {
-//     baseUrl = baseUrl.replace("/projects", "");
-//   }
-//   return baseUrl;
-// };
-
 const getMediaPath = (filePath) => {
   const isGitHubPages = import.meta.env.MODE === "production";
 
@@ -61,6 +47,67 @@ const ProjectDetail = () => {
 
   // Check if the tag[1] link is a video file
   const isVideo = videoSrc && videoSrc.match(/\.(mp4|webm|ogg)$/i);
+
+  const renderAssociatedWorks = () => {
+    return project.tags.slice(3).map((tag, index) => {
+      const mediaPath = getMediaPath(tag.link);
+      const isVideo = tag.link.match(/\.(mp4|webm|ogg)$/i);
+      const isImage = tag.link.match(/\.(jpg|jpeg|png|gif)$/i);
+      const isExternalLink = !isVideo && !isImage;
+
+      if (isVideo) {
+        return (
+          <div key={index} className="col-md-4 mb-3">
+            <video
+              controls
+              style={{ width: "100%" }}
+              src={mediaPath}
+              alt={tag.text}
+            >
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        );
+      } else if (isImage) {
+        return (
+          <div key={index} className="col-md-4 mb-3">
+            <img src={mediaPath} alt={tag.text} className="img-fluid" />
+          </div>
+        );
+      } else if (isExternalLink) {
+        return (
+          <div key={index} className="col-md-4 mb-3">
+            <div className="external-link-container">
+              <div className="buttons">
+                <a
+                  href={tag.link}
+                  className="main-button"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: tag.link === "" ? "none" : "block"
+                  }}
+                >
+                  {tag.text}
+                </a>
+                <button
+                  className="copy-button sub-button mt-2"
+                  onClick={() => navigator.clipboard.writeText(tag.link)}
+                >
+                  Copy Link
+                </button>
+              </div>
+              <p className="link-text mt-2">
+                <small>{tag.link}</small>
+              </p>
+            </div>
+          </div>
+        );
+      }
+
+      return null;
+    });
+  };
 
   return (
     <div className="container acontainer pb-5">
@@ -113,6 +160,12 @@ const ProjectDetail = () => {
             </div>
           </div>
         </div>
+        {project.tags.length > 3 && (
+          <div className="row mt-5">
+            <h3>Some of my other works associated</h3>
+            <div className="row">{renderAssociatedWorks()}</div>
+          </div>
+        )}
       </div>
     </div>
   );
