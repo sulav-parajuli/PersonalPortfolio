@@ -133,7 +133,7 @@ const AboutMe = () => {
             <h3>
               <i className="fas fa-envelope mt-0 fa-1x"></i>Email:
             </h3>
-            sulavparajuli82@gmail.com
+            mail@sulav-parajuli.com.np
             <h3>
               <i className="fas fa-phone mt-0 fa-1x"></i>Phone:
             </h3>

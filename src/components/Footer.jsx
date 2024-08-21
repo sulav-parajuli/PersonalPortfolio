@@ -110,7 +110,7 @@ function Footer() {
               <FontAwesomeIcon icon={faGithub} size="2x" />
             </a>
             <a
-              href="mailto:sulavparajuli82@gmail.com"
+              href="mailto:mail@sulav-parajuli.com.np"
               className="text-white mx-3"
             >
               <FontAwesomeIcon icon={faEnvelope} size="2x" />
