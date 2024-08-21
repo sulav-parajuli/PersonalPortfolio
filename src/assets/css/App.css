@@ -64,6 +64,12 @@ hr {
     padding-bottom: 0px !important;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 1.5rem !important;
+    }
+}
+
 .logo:hover {
     color: #00a2ed;
 }
@@ -167,6 +173,7 @@ hr {
     padding-left: 5%;
     padding-right: 5%;
     margin: 0;
+    align-items: center;
 }
 
 .text-container {
@@ -180,7 +187,7 @@ hr {
 .main-text {
     /* font-family: "Poppins", sans-serif; */
     font-size: clamp(2.5rem, 4vw + 1rem, 4.5rem);
-    line-height: 4.6875rem;
+    /* line-height: 4.6875rem; */
     font-weight: bold;
     margin-bottom: 15px;
     text-wrap: balance;
@@ -244,6 +251,7 @@ hr {
 
 .image-container {
     overflow: hidden;
+    align-self: flex-end;
 }
 
 .main-image {
@@ -803,14 +811,15 @@ textarea:valid~label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5%;
-    gap: 5%;
+    /* padding: 0.5%; */
+    /* gap: 5%; */
     padding-top: 2%;
 }
 
-#about {
+
+/* #about {
     padding: 2%;
-}
+} */
 
 #profile-img {
     width: 50%;
@@ -844,34 +853,25 @@ textarea:valid~label {
     z-index: 1;
 }
 
-#profile-des,
-#skills,
-#services {
+
+/* #profile-des {
     padding-right: 3%;
-}
-
-
-/* .services {
-  justify-content: space-between;
-  align-items: center;
-  padding: 3%;
-  gap: 5%;
 } */
 
 #about_details {
-    padding-left: 4.5%;
+    /* padding-left: 4.5%; */
     justify-content: space-between;
 }
 
 #details {
     align-items: flex-start;
     width: 50%;
-    padding-left: 3%;
+    /* padding-left: 3%; */
 }
 
 .about-container h1 {
     font-family: "Ubuntu", sans-serif;
-    padding: 2.5%;
+    /* padding: 2.5%; */
 }
 
 .about-container h2 {
@@ -884,17 +884,12 @@ textarea:valid~label {
     font-family: "Rubik", sans-serif;
 }
 
-.about-container h3 i {
-    padding-right: 1.2%;
-}
-
 .scontainer {
-    padding-top: 70px;
+    padding-top: 120px;
 }
 
 #skills {
     width: 50%;
-    padding-left: 3%;
 }
 
 .carousel-control-prev,
@@ -909,6 +904,25 @@ textarea:valid~label {
     /* Example to make icons more visible */
     border-radius: 50%;
     padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #profile-img {
+        width: 100%;
+    }
+    #about_details {
+        padding: 0;
+    }
+    #details {
+        width: 100%;
+    }
+    #skills {
+        width: 100%;
+    }
 }
 
 

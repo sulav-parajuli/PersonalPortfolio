@@ -75,158 +75,167 @@ const AboutMe = () => {
   ];
 
   return (
-    <div className="container-fluid acontainer pb-5">
-      <div id="about" className="reveal about-container">
-        <div id="profile-img">
-          <img id="main-img" src={sulav} alt="Profile Image" />
-          <div className="circle"></div>
-        </div>
-        <div className="col-md-6 mt-3 pr-2" id="profile-des">
-          <p id="section-text">
-            <b>ABOUT</b>
-          </p>
-          <h1
-            className="main-text"
-            id="bottom-gap"
-            style={{ paddingLeft: "0px" }}
-          >
-            About Me
-          </h1>
-          <h2 id="bottom-gap">Sulav Parajuli</h2>
-          <p style={{ color: "#777" }}>Developer</p>
-          <p>
-            Hi! I am a web developer and programmer with expertise in front-end
-            techniques, UI design, and creating visually appealing and
-            user-friendly interfaces. I have a strong track record in developing
-            web pages, web-based applications, and mobile applications. I
-            recently completed my Bachelor of Science in Computer Science and
-            Information Technology at Tribhuvan University, studying at Mount
-            Annapurna Campus in Pokhara. I also have experience in web and
-            graphic design. I am committed to expanding my skills and
-            contributing to the world of technology.
-          </p>
-          <div className="buttons">
-            <Link className="main-button" to="/contact">
-              Hire Me
-            </Link>
-            <a href={CV} download className=" sub-button">
-              My Resume
-            </a>
+    <div className="container">
+      <div className="container-fluid acontainer pb-5">
+        <div id="about" className="reveal about-container pb-5">
+          <div id="profile-img">
+            <img
+              id="main-img"
+              src={sulav}
+              alt="Profile Image"
+              className="img-fluid rounded-circle"
+            />
+            <div className="circle"></div>
+          </div>
+          <div className="col-md-6 mt-3 pr-2" id="profile-des">
+            <p id="section-text">
+              <b>ABOUT</b>
+            </p>
+            <h1
+              className="main-text"
+              id="bottom-gap"
+              style={{ paddingLeft: "0px" }}
+            >
+              About Me
+            </h1>
+            <h2 id="bottom-gap">Sulav Parajuli</h2>
+            <p className="text-muted">Developer</p>
+            <p>
+              Hi! I am a web developer and programmer with expertise in
+              front-end techniques, UI design, and creating visually appealing
+              and user-friendly interfaces. I have a strong track record in
+              developing web pages, web-based applications, and mobile
+              applications. I recently completed my Bachelor of Science in
+              Computer Science and Information Technology at Tribhuvan
+              University, studying at Mount Annapurna Campus in Pokhara. I also
+              have experience in web and graphic design. I am committed to
+              expanding my skills and contributing to the world of technology.
+            </p>
+            <div className="buttons d-flex gap-2 flex-wrap">
+              <Link className="main-button" to="/contact">
+                Hire Me
+              </Link>
+              <a href={CV} download className=" sub-button">
+                My Resume
+              </a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="about_details" className="reveal about-container">
-        <div id="details">
-          <h2 id="bottom-gap">Details</h2>
-          <p>Here is some details about me:</p>
-          {/* <h3 id="bottom-gap">
+        <div id="about_details" className="reveal about-container pb-5">
+          <div className="col-md-6" id="details">
+            <h2 id="bottom-gap">Details</h2>
+            <p>Here is some details about me:</p>
+            {/* <h3 id="bottom-gap">
             <i className="fa-solid fa-cake-candles"></i>Birthday:
           </h3>
           5th April, 2001 */}
-          <h3>
-            <i className="fas fa-envelope mt-0 fa-1x"></i>Email:
-          </h3>
-          sulavparajuli82@gmail.com
-          <h3>
-            <i className="fas fa-phone mt-0 fa-1x"></i>Phone:
-          </h3>
-          +9779816106956
-          {/* <h3><i className="fa-solid fa-user"></i>Age:</h3>
+            <h3>
+              <i className="fas fa-envelope mt-0 fa-1x"></i>Email:
+            </h3>
+            sulavparajuli82@gmail.com
+            <h3>
+              <i className="fas fa-phone mt-0 fa-1x"></i>Phone:
+            </h3>
+            +9779816106956
+            {/* <h3><i className="fa-solid fa-user"></i>Age:</h3>
           22 years old */}
-          <h3>
-            <i className="fas fa-map-marker-alt fa-1x"></i>Location:
-          </h3>
-          Pokhara, Nepal
-        </div>
-        <div id="skills" className="col-md-6 mt-3 pr-2">
-          <h2 id="bottom-gap">Skills</h2>
-          <p id="bottom-gap">
-            I have a wide range of skills and ideas that I am eager to share
-            with the new generation. My goal is to create something impactful
-            that will leave a lasting impression on the world.
-          </p>
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-lg-12">
-                <div
-                  id="skillsCarousel"
-                  className="carousel slide"
-                  data-bs-ride="carousel"
-                >
-                  <div className="carousel-inner">
-                    {skillSets.map((skillSet, index) => (
-                      <div
-                        className={`carousel-item ${
-                          index === 0 ? "active" : ""
-                        }`}
-                        key={index}
-                      >
-                        <div className="skills text-center">
-                          <div className="row justify-content-center align-items-center">
-                            {skillSet.map((skill, i) => (
-                              <div className="col-md-2" key={i}>
-                                <img
-                                  src={skill.src}
-                                  alt={skill.alt}
-                                  title={skill.title}
-                                  className="img-fluid"
-                                />
-                              </div>
-                            ))}
+            <h3>
+              <i className="fas fa-map-marker-alt fa-1x"></i>Location:
+            </h3>
+            Pokhara, Nepal
+          </div>
+          <div id="skills" className="col-md-6 mt-3">
+            <h2 id="bottom-gap">Skills</h2>
+            <p>
+              I have a wide range of skills and ideas that I am eager to share
+              with the new generation. My goal is to create something impactful
+              that will leave a lasting impression on the world.
+            </p>
+            <div className="container">
+              <div className="row justify-content-center">
+                <div className="col-lg-12">
+                  <div
+                    id="skillsCarousel"
+                    className="carousel slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div className="carousel-inner">
+                      {skillSets.map((skillSet, index) => (
+                        <div
+                          className={`carousel-item ${
+                            index === 0 ? "active" : ""
+                          }`}
+                          key={index}
+                        >
+                          <div className="skills text-center">
+                            <div className="row justify-content-center align-items-center">
+                              {skillSet.map((skill, i) => (
+                                <div className="col-6 col-md-2 mb-3" key={i}>
+                                  <img
+                                    src={skill.src}
+                                    alt={skill.alt}
+                                    title={skill.title}
+                                    className="img-fluid"
+                                  />
+                                </div>
+                              ))}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#skillsCarousel"
+                      data-bs-slide="prev"
+                    >
+                      <span
+                        className="carousel-control-prev-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#skillsCarousel"
+                      data-bs-slide="next"
+                    >
+                      <span
+                        className="carousel-control-next-icon"
+                        aria-hidden="true"
+                      ></span>
+                      <span className="visually-hidden">Next</span>
+                    </button>
                   </div>
-                  <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target="#skillsCarousel"
-                    data-bs-slide="prev"
-                  >
-                    <span
-                      className="carousel-control-prev-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Previous</span>
-                  </button>
-                  <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target="#skillsCarousel"
-                    data-bs-slide="next"
-                  >
-                    <span
-                      className="carousel-control-next-icon"
-                      aria-hidden="true"
-                    ></span>
-                    <span className="visually-hidden">Next</span>
-                  </button>
                 </div>
-              </div>
-              <div className="col-lg-12">
-                <p className="text-center mt-3">
-                  <small>
-                    <i>
-                      *These are some of the skills I have. I am always learning
-                      new things and expanding my knowledge.
-                    </i>
-                  </small>
-                </p>
-                <p>Some of the other skills that i can work well with are:.</p>
-                <p>
-                  <ol>
-                    <li>Graphic Designing</li>
-                    <li>Video Editing</li>
-                    <li>UI/UX</li>
-                    <li>API|Manual Testing </li>
-                    <li>SEO</li>
-                  </ol>
-                </p>
-                <Link to="/skills" className="main-button">
-                  My Skills and Experience
-                </Link>
+                <div className="col-lg-12">
+                  <p className="text-center mt-3">
+                    <small>
+                      <i>
+                        *These are some of the skills I have. I am always
+                        learning new things and expanding my knowledge.
+                      </i>
+                    </small>
+                  </p>
+                  <p>
+                    Some of the other skills that i can work well with are:.
+                  </p>
+                  <p>
+                    <ol>
+                      <li>Graphic Designing</li>
+                      <li>Video Editing</li>
+                      <li>UI/UX</li>
+                      <li>API | Manual Testing </li>
+                      <li>SEO</li>
+                    </ol>
+                  </p>
+                  <Link to="/skills" className="main-button">
+                    My Skills and Experience
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

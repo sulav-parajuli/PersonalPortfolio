@@ -110,15 +110,12 @@ const Skills = () => {
 
   return (
     <div className="container-fluid scontainer pb-5 reveal">
-      <div id="skills" className="row about-container">
+      <div className="row justify-content-center mx-auto">
         <div className="col-md-10">
-          <p id="section-text" style={{ paddingLeft: "15%" }}>
+          <p id="section-text">
             <b>MY SKILLS AND EXPERIENCE</b>
           </p>
         </div>
-      </div>
-
-      <div className="row justify-content-center">
         <div className="col-md-10">
           <h1 className="mb-4 main-text">Skills</h1>
           <div
@@ -135,14 +132,14 @@ const Skills = () => {
                   <div className="skills text-center">
                     <div className="row justify-content-center align-items-center">
                       {skillSet.map((skill, i) => (
-                        <div className="col-md-2 mb-3" key={i}>
+                        <div className="col-6 col-md-2 mb-3" key={i}>
                           <img
                             src={skill.src}
                             alt={skill.alt}
                             title={skill.title}
                             className="img-fluid"
                           />
-                          <p>{skill.title}</p>
+                          <p className="mt-2">{skill.title}</p>
                         </div>
                       ))}
                     </div>
@@ -174,6 +171,26 @@ const Skills = () => {
               ></span>
               <span className="visually-hidden">Next</span>
             </button>
+          </div>
+          <div className="col-lg-12">
+            <p className="text-center mt-3">
+              <small>
+                <i>
+                  *These are some of the skills I have. I am always learning new
+                  things and expanding my knowledge.
+                </i>
+              </small>
+            </p>
+            <p>Some of the other skills that i can work well with are:.</p>
+            <p>
+              <ol>
+                <li>Graphic Designing</li>
+                <li>Video Editing</li>
+                <li>UI/UX</li>
+                <li>API | Manual Testing </li>
+                <li>SEO</li>
+              </ol>
+            </p>
           </div>
         </div>
       </div>

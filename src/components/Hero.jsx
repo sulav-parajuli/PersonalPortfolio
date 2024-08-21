@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <>
       <div className="container-fluid hcontainer">
-        <div className="row hero-container align-items-center">
+        <div className="row hero-container">
           <div className="col-md-6 text-container">
             <div className="text-block">
               <p className="mb-0 sub-text">Sulav Parajuli</p>
