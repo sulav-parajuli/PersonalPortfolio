@@ -11,7 +11,15 @@ const Projects = () => {
 
   const getImagePath = (imageName) => {
     try {
-      return new URL(`${imageName}`, import.meta.url).href;
+      // Check if the environment is local or on GitHub Pages
+      const isLocalEnv =
+        window.location.hostname === "localhost" ||
+        window.location.hostname === "127.0.0.1";
+
+      // Set the base path depending on the environment
+      const basePath = isLocalEnv ? "" : "/PersonalPortfolio/";
+
+      return `${basePath}${imageName}`;
     } catch (error) {
       console.error("Error loading image:", error);
       return null;

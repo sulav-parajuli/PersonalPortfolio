@@ -3,19 +3,54 @@ import { useParams } from "react-router-dom";
 import projects from "../data/projects.json"; // Import the JSON file
 import Error from "./Error.jsx";
 
+// // Utility function to get the correct path for images and videos
+// const getMediaPath = (filePath) => {
+//   const isLocalEnv =
+//     window.location.hostname === "localhost" ||
+//     window.location.hostname === "127.0.0.1";
+//   const basePath = isLocalEnv ? "" : "/PersonalPortfolio/";
+//   let baseUrl = `${basePath}${filePath}`;
+//   // Check if baseUrl contains "/projects" and remove it
+//   if (baseUrl.includes("/projects")) {
+//     baseUrl = baseUrl.replace("/projects", "");
+//   }
+//   return baseUrl;
+// };
+
+const getMediaPath = (filePath) => {
+  let basePath = window.location.pathname;
+
+  // Remove everything after "/projects/" (including the ID)
+  if (basePath.includes("/projects/")) {
+    basePath = basePath.split("/projects/")[0];
+  }
+
+  // Construct the full path
+  let fullPath = `${basePath}/${filePath}`;
+
+  // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
+  if (!fullPath.includes("/PersonalPortfolio")) {
+    fullPath = "/PersonalPortfolio" + fullPath;
+  }
+
+  return fullPath;
+};
+
 const ProjectDetail = () => {
   const { id } = useParams(); // Get the project ID from the route parameters
   const project = projects.find((proj) => proj.id === id); // Find the project details based on ID
 
-  // Dynamically import the image
-  const imageSrc = new URL(`${project.tags[0].link}`, import.meta.url).href;
+  const imageSrc = getMediaPath(project.tags[0].link);
+  const videoSrc = project.tags[1].link
+    ? getMediaPath(project.tags[1].link)
+    : null;
 
   if (!project) {
     return <Error />;
   }
 
   // Check if the tag[1] link is a video file
-  const isVideo = project.tags[1].link.match(/\.(mp4|webm|ogg)$/i);
+  const isVideo = videoSrc && videoSrc.match(/\.(mp4|webm|ogg)$/i);
 
   return (
     <div className="container acontainer pb-5">
@@ -36,7 +71,7 @@ const ProjectDetail = () => {
                 <video
                   controls
                   style={{ width: "100%" }}
-                  src={new URL(`${project.tags[1].link}`, import.meta.url).href}
+                  src={videoSrc}
                   alt={project.title}
                 >
                   Your browser does not support the video tag.
