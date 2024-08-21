@@ -18,26 +18,32 @@ import Error from "./Error.jsx";
 // };
 
 const getMediaPath = (filePath) => {
-  const basePath = import.meta.env.BASE_URL;
+  const isGitHubPages = import.meta.env.MODE === "production";
 
-  // Check if the basePath ends with "projects" or "projects/:id"
-  let adjustedBasePath = basePath;
-  // Remove everything after "/projects/" (including the ID)
-  if (basePath.includes("/projects/")) {
-    adjustedBasePath = basePath.split("/projects/")[0];
+  if (isGitHubPages) {
+    // Use the raw GitHub URL for images when in GitHub Pages
+    return `https://raw.githubusercontent.com/sulav-parajuli/PersonalPortfolio/main/${filePath}`;
+  } else {
+    const basePath = import.meta.env.BASE_URL;
+
+    // Check if the basePath ends with "projects" or "projects/:id"
+    let adjustedBasePath = basePath;
+    // Remove everything after "/projects/" (including the ID)
+    if (basePath.includes("/projects/")) {
+      adjustedBasePath = basePath.split("/projects/")[0];
+    }
+
+    // Construct the full path
+    let fullPath = `${adjustedBasePath}${filePath}`;
+
+    // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
+    if (!fullPath.includes("/PersonalPortfolio")) {
+      fullPath = "/PersonalPortfolio" + fullPath;
+    }
+
+    // Return the correct path
+    return new URL(`${fullPath}`, import.meta.url).href;
   }
-
-  // Construct the full path
-  let fullPath = `${adjustedBasePath}${filePath}`;
-
-  // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
-  if (!fullPath.includes("/PersonalPortfolio")) {
-    fullPath = "/PersonalPortfolio" + fullPath;
-  }
-
-  // Return the correct path
-  return new URL(`${fullPath}`, import.meta.url).href;
-  // return fullPath;
 };
 
 const ProjectDetail = () => {

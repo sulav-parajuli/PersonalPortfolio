@@ -11,18 +11,25 @@ const Projects = () => {
 
   const getImagePath = (filePath) => {
     try {
-      const basePath = import.meta.env.BASE_URL;
+      const isGitHubPages = import.meta.env.MODE === "production";
 
-      // Construct the full path
-      let fullPath = `${basePath}${filePath}`;
+      if (isGitHubPages) {
+        // Use the raw GitHub URL for images when in GitHub Pages
+        return `https://raw.githubusercontent.com/sulav-parajuli/PersonalPortfolio/main/${filePath}`;
+      } else {
+        const basePath = import.meta.env.BASE_URL;
 
-      // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
-      if (!fullPath.includes("/PersonalPortfolio")) {
-        fullPath = "/PersonalPortfolio" + fullPath;
+        // Construct the full path
+        let fullPath = `${basePath}${filePath}`;
+
+        // Ensure GitHub Pages compatibility by adding "/PersonalPortfolio" if necessary
+        if (!fullPath.includes("/PersonalPortfolio")) {
+          fullPath = "/PersonalPortfolio" + fullPath;
+        }
+
+        // Return the correct path
+        return new URL(`${fullPath}`, import.meta.url).href;
       }
-
-      // Return the correct path
-      return new URL(`${fullPath}`, import.meta.url).href;
     } catch (error) {
       console.error("Error loading image:", error);
       return null;
