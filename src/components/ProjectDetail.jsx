@@ -97,7 +97,7 @@ const ProjectDetail = () => {
                   Copy Link
                 </button>
               </div>
-              <p className="link-text mt-2">
+              <p className="link-text mt-2 text-break">
                 <small>{tag.link}</small>
               </p>
             </div>
@@ -110,7 +110,7 @@ const ProjectDetail = () => {
   };
 
   return (
-    <div className="container acontainer pb-5">
+    <div className="container acontainer pb-5 mx-auto">
       <div className="container-fluid reveal ">
         <div className="row">
           <div className="col-md-6">

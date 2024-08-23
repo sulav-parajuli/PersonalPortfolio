@@ -195,7 +195,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="row justify-content-center mt-5">
+      <div className="row justify-content-center mt-5 mx-auto">
         <div className="col-md-10">
           <h3 className="main-text mb-4">Experience</h3>
           {experiences.map((exp, index) => (
