@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import projects from "../data/projects.json"; // Import the JSON file
 import Error from "./Error.jsx";
@@ -35,6 +35,7 @@ const getMediaPath = (filePath) => {
 const ProjectDetail = () => {
   const { id } = useParams(); // Get the project ID from the route parameters
   const project = projects.find((proj) => proj.id === id); // Find the project details based on ID
+  const [isScrollLocked, setIsScrollLocked] = useState(false); // State to manage scroll lock
 
   const imageSrc = getMediaPath(project.tags[0].link);
   const videoSrc = project.tags[1].link
@@ -44,6 +45,11 @@ const ProjectDetail = () => {
   if (!project) {
     return <Error />;
   }
+
+  // Toggle scroll lock
+  const toggleScrollLock = () => {
+    setIsScrollLocked(!isScrollLocked);
+  };
 
   // Check if the tag[1] link is a video file
   const isVideo = videoSrc && videoSrc.match(/\.(mp4|webm|ogg)$/i);
@@ -70,8 +76,30 @@ const ProjectDetail = () => {
         );
       } else if (isImage) {
         return (
-          <div key={index} className="col-md-4 mb-3">
-            <img src={mediaPath} alt={tag.text} className="img-fluid" />
+          <div key={index} className="col-md-4 col-md-6 mb-3">
+            {/* Scrollable container */}
+            <div
+              className="scrollable-container"
+              style={{
+                maxHeight: "500px",
+                overflowY: isScrollLocked ? "hidden" : "auto",
+                border: "1px solid #ccc",
+                position: "relative"
+              }}
+            >
+              <img src={mediaPath} alt={tag.text} className="img-fluid" />
+              <button
+                className="scroll-lock-button main-button"
+                onClick={toggleScrollLock}
+                style={{
+                  position: "fixed",
+                  left: "20px",
+                  zIndex: "1000"
+                }}
+              >
+                {isScrollLocked ? "🔒" : "🔓"}
+              </button>
+            </div>
           </div>
         );
       } else if (isExternalLink) {

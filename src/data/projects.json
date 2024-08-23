@@ -21,6 +21,11 @@
                 "link": "https://github.com/sulav-parajuli/EthTix",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/EthTixFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
@@ -47,6 +52,11 @@
                 "link": "",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/RajendraKhatriFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
@@ -73,6 +83,11 @@
                 "link": "https://github.com/sulav-parajuli/Bibek/",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/BibekFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
@@ -99,6 +114,11 @@
                 "link": "https://github.com/sulav-parajuli/jazzyventure",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/JazzyVentureFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
@@ -125,6 +145,11 @@
                 "link": "https://github.com/sulav-parajuli/swopnilstore",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/swopnilstoreFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
@@ -151,6 +176,16 @@
                 "link": "https://github.com/sulav-parajuli/Swopnil-Store_new",
                 "icon": "fab fa-github",
                 "text": "Github"
+            },
+            {
+                "link": "src/assets/images/project/swopnilstorenewFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
+            },
+            {
+                "link": "src/assets/images/project/swopnilstoreproductdetailFS.png",
+                "icon": "fas fa-plus",
+                "text": "View"
             }
         ]
     },
